@@ -7,47 +7,47 @@
   <script src="https://cdn.tailwindcss.com"></script>
   <link rel="stylesheet" href="style.css" />
 </head>
-<body class="bg-gray-100 min-h-screen">
+<body class="bg-gradient-to-br from-blue-100 to-blue-300 min-h-screen flex flex-col">
   <!-- Navbar moderna -->
   <nav class="bg-white shadow-md">
     <div class="container mx-auto px-4 py-4 flex justify-between items-center">
       <span class="text-2xl font-bold text-blue-700">Tergo Studios Collection</span>
       <ul class="flex gap-6">
         <li>
-          <a href="#" class="text-blue-600 font-semibold border-b-2 border-blue-600 pb-1">Emisoras Local</a>
+          <a href="emisoras-local.html" class="text-gray-600 hover:text-blue-600 font-semibold transition">Emisoras Local</a>
         </li>
         <li>
-          <a href="#" class="text-gray-600 hover:text-blue-600 font-semibold transition">Emisoras Online</a>
+          <a href="emisoras-online.html" class="text-gray-600 hover:text-blue-600 font-semibold transition">Emisoras Online</a>
         </li>
         <li>
-          <a href="#" class="text-gray-600 hover:text-blue-600 font-semibold transition">Horarios</a>
+          <a href="horarios.html" class="text-gray-600 hover:text-blue-600 font-semibold transition">Horarios</a>
         </li>
       </ul>
     </div>
   </nav>
 
-  <!-- Contenido principal -->
-  <main class="container mx-auto px-4 py-10">
-    <!-- Sección: Emisoras Local (activa por defecto) -->
-    <section id="emisoras-local">
-      <h2 class="text-3xl font-bold text-blue-700 mb-4">Emisoras Local</h2>
-      <p class="mb-6 text-gray-600">Escucha tus emisoras locales favoritas.</p>
-      <div class="emisoras flex flex-col md:flex-row gap-6 justify-center items-start">
-        <div class="emisora bg-white shadow-lg rounded-lg p-6 w-full md:w-80">
-          <h3 class="text-xl font-semibold mb-4 text-blue-600">Radio Local 1</h3>
-          <audio controls class="w-full" src="https://URL_DE_TU_STREAM_1"></audio>
-        </div> 
-        <div class="emisora bg-white shadow-lg rounded-lg p-6 w-full md:w-80">
-          <h3 class="text-xl font-semibold mb-4 text-blue-600">Radio Local 2</h3>
-          <audio controls class="w-full" src="https://URL_DE_TU_STREAM_2"></audio>
-        </div>
-      </div>
-    </section>
-
-    <!-- Sección: Emisoras Online -->
-    <section id="emisoras-online" class="hidden">
-      <h2 class="text-3xl font-bold text-blue-700 mb-4">Emisoras Online</h2>
-      <p class="mb-6 text-gray-600">Descubre emisoras online de todo el mundo.</p>
+  <!-- Página de bienvenida -->
+  <main class="flex-grow flex flex-col items-center justify-center text-center">
+    <h1 class="text-5xl font-extrabold text-blue-700 mb-6 drop-shadow">Bienvenido a Tergo Studios Collection</h1>
+    <p class="text-lg text-gray-700 mb-10 max-w-xl">
+      Disfruta de Ator FM en modo local o online y consulta los horarios de tus programas favoritos.
+    </p>
+    <div class="flex flex-col md:flex-row gap-8 mb-12">
+      <a href="emisoras-local.html" class="bg-blue-600 text-white px-8 py-4 rounded-lg shadow-lg text-xl font-semibold hover:bg-blue-700 transition">Emisoras Local</a>
+      <a href="emisoras-online.html" class="bg-blue-500 text-white px-8 py-4 rounded-lg shadow-lg text-xl font-semibold hover:bg-blue-600 transition">Emisoras Online</a>
+      <a href="horarios.html" class="bg-blue-400 text-white px-8 py-4 rounded-lg shadow-lg text-xl font-semibold hover:bg-blue-500 transition">Horarios</a>
+    </div>
+    <div class="bg-white shadow-lg rounded-lg p-6 w-full md:w-96 flex flex-col items-center">
+      <h2 class="text-2xl font-bold text-blue-700 mb-4">Ator FM</h2>
+      <audio controls class="w-full" src="https://myipmd.ddns.net/listen/atorfm/radio.mp3"></audio>
+      <p class="text-gray-500 mt-2 text-sm">Modo online</p>
+    </div>
+  </main>
+  <footer class="text-center text-gray-500 py-6">
+    &copy; 2024 Tergo Studios Collection
+  </footer>
+</body>
+</html>
       <div class="emisoras flex flex-col md:flex-row gap-6 justify-center items-start">
         <div class="emisora bg-white shadow-lg rounded-lg p-6 w-full md:w-80">
           <h3 class="text-xl font-semibold mb-4 text-blue-600">Online Radio 1</h3>
