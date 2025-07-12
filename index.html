@@ -2,19 +2,22 @@
 <html lang="es">
 <head>
   <meta charset="UTF-8" />
-  <title>Mi Página de Emisoras</title>
+  <title>Tergo Studios Collection</title>
+  <!-- Tailwind CSS CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
   <link rel="stylesheet" href="style.css" />
 </head>
-<body>
-  <h1>Mis Emisoras Favoritas</h1>
-  <div class="emisoras">
-    <div class="emisora">
-      <h2>Radio 1</h2>
-      <audio controls src="https://URL_DE_TU_STREAM_1"></audio>
+<body class="bg-gray-100 min-h-screen">
+  <h1 class="text-4xl font-bold text-center mt-8 text-blue-700">Tergo Studios Collection</h1>
+  <p class="text-center text-gray-600 mb-8">Bienvenido a Tergo Studios Collection, tu portal de emisoras favoritas seleccionadas para ti.</p>
+  <div class="emisoras flex flex-col md:flex-row gap-6 justify-center items-start">
+    <div class="emisora bg-white shadow-lg rounded-lg p-6 w-full md:w-80">
+      <h2 class="text-2xl font-semibold mb-4 text-blue-600">Radio 1</h2>
+      <audio controls class="w-full" src="https://URL_DE_TU_STREAM_1"></audio>
     </div> 
-    <div class="emisora">
-      <h2>Radio 2</h2>
-      <audio controls src="https://URL_DE_TU_STREAM_2"></audio>
+    <div class="emisora bg-white shadow-lg rounded-lg p-6 w-full md:w-80">
+      <h2 class="text-2xl font-semibold mb-4 text-blue-600">Radio 2</h2>
+      <audio controls class="w-full" src="https://URL_DE_TU_STREAM_2"></audio>
     </div>
   </div>
   <script src="script.js"></script>
