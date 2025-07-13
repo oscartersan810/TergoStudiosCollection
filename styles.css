@@ -1,22 +1,138 @@
+/* Estilos personalizados para modo oscuro premium */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
+
 body {
-  font-family: Arial, sans-serif;
-  text-align: center;
-  background-color: #fafafa;
-  color: #333;
+  font-family: 'Inter', sans-serif;
 }
 
-.emisoras {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  gap: 20px;
-  padding: 20px;
+/* Personalización de la barra de scroll */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
 }
 
-.emisora {
-  background-color: #fff;
-  border: 1px solid #ddd;
-  padding: 15px;
-  width: 250px;
-  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+::-webkit-scrollbar-track {
+  background: #1a1a1a;
+  border-radius: 10px;
 }
+
+::-webkit-scrollbar-thumb {
+  background: #4b5563;
+  border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #6b7280;
+}
+
+/* Animación de spin lento */
+@keyframes spin-slow {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.animate-spin-slow {
+  animation: spin-slow 8s linear infinite;
+}
+
+/* Efectos para el reproductor de audio */
+audio {
+  filter: invert(1) hue-rotate(180deg) contrast(0.8) brightness(1.2);
+}
+
+audio::-webkit-media-controls-panel {
+  background-color: #1f2937;
+  border-radius: 8px;
+}
+
+audio::-webkit-media-controls-play-button,
+audio::-webkit-media-controls-mute-button {
+  background-color: #3b82f6;
+  border-radius: 50%;
+}
+
+audio::-webkit-media-controls-current-time-display,
+audio::-webkit-media-controls-time-remaining-display {
+  color: #e5e7eb;
+}
+
+/* Efecto de gradiente animado para texto */
+.text-gradient-animate {
+  background-size: 200% 200%;
+  animation: text-gradient 4s ease infinite;
+}
+
+@keyframes text-gradient {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+/* Transiciones suaves para elementos interactivos */
+a, button, .transition-all {
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+/* Efecto de hover para las filas de la tabla */
+.table-hover tr {
+  transition: background-color 0.2s ease;
+}
+
+/* Mejoras en los bordes para modo oscuro */
+.border-gray-700 {
+  border-color: rgba(55, 65, 81, 0.5);
+}
+
+/* Ajustes para el efecto glassmorphism */
+.backdrop-blur-sm {
+  backdrop-filter: blur(8px);
+}
+
+/* Efecto de brillo al pasar el mouse */
+.hover-glow:hover {
+  box-shadow: 0 0 15px rgba(59, 130, 246, 0.3);
+}
+
+/* Colores personalizados para emisoras vintage */
+.bg-beta { background-color: #8B4513; }
+.text-beta { color: #8B4513; }
+
+.bg-v1 { background-color: #FF0000; }
+.text-v1 { color: #FF0000; }
+
+.bg-v2 { background-color: #FFD700; }
+.text-v2 { color: #FFD700; }
+
+.bg-spectrum { background-color: #FF69B4; }
+.text-spectrum { color: #FF69B4; }
+
+.bg-v3 { background-color: #1E90FF; }
+.text-v3 { color: #1E90FF; }
+
+.bg-junior { background-color: #FFB6C1; }
+.text-junior { color: #FFB6C1; }
+
+.bg-rota { background-color: #ADD8E6; }
+.text-rota { color: #ADD8E6; }
+
+.bg-v4 { background-color: #90EE90; }
+.text-v4 { color: #90EE90; }
+
+.bg-v5 { background-color: #FFA500; }
+.text-v5 { color: #FFA500; }
+
+.bg-rota2 { background-color: #B0E0E6; }
+.text-rota2 { color: #B0E0E6; }
+
+.bg-v6 { background-color: #9370DB; }
+.text-v6 { color: #9370DB; }
