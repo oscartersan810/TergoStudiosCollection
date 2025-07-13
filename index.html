@@ -47,45 +47,33 @@
     }
   </script>
 </head>
-<body class="bg-gray-900 text-gray-100 min-h-screen flex flex-col">
-  <!-- Navbar -->
-  <nav class="bg-gray-800/90 backdrop-blur-md border-b border-gray-700 fixed w-full z-50">
-    <div class="container mx-auto px-4 py-3 flex justify-between items-center">
-      <div class="flex items-center space-x-3">
-        <div class="w-8 h-8 rounded-full bg-gradient-to-r from-purple-500 to-blue-500 animate-spin-slow"></div>
-        <span class="text-xl font-bold bg-gradient-to-r from-purple-400 to-blue-400 bg-clip-text text-transparent">TERGO STUDIOS</span>
-      </div>
-      <ul class="hidden md:flex gap-8">
+<body class="bg-gradient-to-br from-blue-100 to-blue-300 min-h-screen flex flex-col">
+  <!-- Navbar responsive -->
+  <nav class="bg-white shadow-md">
+    <div class="container mx-auto px-4 py-4 flex justify-between items-center">
+      <span class="text-2xl font-bold text-blue-700">Tergo Studios Collection</span>
+      <!-- Botón hamburguesa -->
+      <button id="menu-btn" class="md:hidden text-blue-700 focus:outline-none">
+        <svg class="w-7 h-7" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/>
+        </svg>
+      </button>
+      <ul id="menu" class="hidden absolute top-16 left-0 w-full bg-white border-b border-blue-200 flex-col gap-4 py-4 px-8 md:static md:flex md:flex-row md:gap-6 md:py-0 md:px-0 md:bg-transparent md:border-0 md:items-center">
         <li>
-          <a href="emisoras-local.html" class="text-gray-300 hover:text-white font-medium transition-colors duration-300 relative group">
-            <span class="relative">
-              LOCAL
-              <span class="absolute -bottom-1 left-0 w-0 h-px bg-blue-400 transition-all duration-300 group-hover:w-full"></span>
-            </span>
-          </a>
+          <a href="emisoras-local.html" class="text-gray-600 hover:text-blue-600 font-semibold transition block py-2 md:py-0">Emisoras Local</a>
         </li>
         <li>
-          <a href="emisoras-online.html" class="text-gray-300 hover:text-white font-medium transition-colors duration-300 relative group">
-            <span class="relative">
-              ONLINE
-              <span class="absolute -bottom-1 left-0 w-0 h-px bg-purple-400 transition-all duration-300 group-hover:w-full"></span>
-            </span>
-          </a>
+          <a href="emisoras-online.html" class="text-gray-600 hover:text-blue-600 font-semibold transition block py-2 md:py-0">Emisoras Online</a>
         </li>
         <li>
-          <a href="horarios.html" class="text-gray-300 hover:text-white font-medium transition-colors duration-300 relative group">
-            <span class="relative">
-              HORARIOS
-              <span class="absolute -bottom-1 left-0 w-0 h-px bg-indigo-400 transition-all duration-300 group-hover:w-full"></span>
-            </span>
-          </a>
+          <a href="horarios.html" class="text-gray-600 hover:text-blue-600 font-semibold transition block py-2 md:py-0">Horarios</a>
         </li>
       </ul>
     </div>
   </nav>
 
   <!-- Hero section -->
-  <main class="flex-grow flex items-center justify-center pt-24 pb-16 px-4 relative overflow-hidden">
+  <main class="flex-grow flex flex-col items-center justify-center text-center px-2 pt-24 pb-16 relative overflow-hidden">
     <div class="absolute inset-0 z-0">
       <div class="absolute top-1/4 left-1/4 w-64 h-64 rounded-full bg-purple-900/20 blur-3xl animate-float"></div>
       <div class="absolute top-1/3 right-1/4 w-72 h-72 rounded-full bg-blue-900/20 blur-3xl animate-float" style="animation-delay: 2s;"></div>
@@ -143,10 +131,16 @@
     </div>
   </main>
 
-  <footer class="text-center py-8 text-gray-500 text-sm border-t border-gray-800">
-    <div class="container mx-auto px-4">
-      <p>&copy; 2024 TERGO STUDIOS COLLECTION. TODOS LOS DERECHOS RESERVADOS.</p>
-    </div>
+  <footer class="text-center text-gray-500 py-6">
+    &copy; 2024 Tergo Studios Collection
   </footer>
+  <script>
+    // Navbar hamburguesa
+    const btn = document.getElementById('menu-btn');
+    const menu = document.getElementById('menu');
+    btn.addEventListener('click', () => {
+      menu.classList.toggle('hidden');
+    });
+  </script>
 </body>
 </html>
